@@ -1,0 +1,122 @@
+.post__content {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+    .nav {
+        z-index: 10;
+        top: 56px;
+        background-color: #fff;
+        width: 300px;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav__item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+        pointer-events: visible;
+    }
+    .nav a{
+        color: black;
+    }
+    
+    .header__title {
+        display: none;
+    }
+    .header {
+        width: 100%;
+    }
+    navbar-app {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    
+    .nav__item:hover {
+        background-color: #e48257;
+    }
+    .detail-item {
+        display: block;
+    }
+    .detail-item__thumbnail {
+        width: 100%;
+    }
+    .detail-item__content, #customer-reviews {
+        margin: auto 10px;
+    }
+    
+}
+
+@media screen and (min-width: 455px) {
+    
+}
+
+@media screen and (min-width: 500px) {
+    .header__menu {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 650px) {
+    .post-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .post-item__title {
+        font-size: 18px;
+    }
+
+    .post-item__description {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .post__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+    .posts {
+        margin: 2%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .post__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+    
+}
